@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var x = prompt("input date", "Sep 06, 2017");
+	yesterday(x)
+
+	function yesterday(date){
+		a = new Array();
+		a = date.split(' ');
+
+		day = parseInt(a[1]) - 1;
+
+
+
+		if((day == 0) && (a[0] == "Jan")){
+			day = 31;
+			a[0] = "Dec";
+			a[2] = a[2]-1;
+		}
+
+		else if((day == 0) && (a[0] == "Feb")){
+			day = 31;
+			a[0] = "Jan";
+		}
+
+		else if((day == 0) && (a[0] == "Mar") && (a[2] % 4 !=0)){   // szokoevek miatt 4 evente februar 29 nap
+			day = 28;
+			a[0] = "Feb";
+		}
+
+		else if((day == 0) && (a[0] == "Mar") && (a[2] % 4 ==0)){   
+			day = 29;
+			a[0] = "Feb";
+		}
+
+		else if ((day == 0) && (a[0] == "Apr")){
+			day = 31;
+			a[0] = "Mar";
+		}
+
+		else if ((day == 0) && (a[0] == "June")){
+			day = 30;
+			a[0] = "Apr";
+		}
+
+		else if ((day == 0) && (a[0] == "July")){
+			day = 31;
+			a[0] = "June";
+		}
+
+		else if ((day == 0) && (a[0] == "Aug")){
+			day = 30;
+			a[0] = "July";
+		}
+
+		else if ((day == 0) && (a[0] == "Sep")){
+			day = 31;
+			a[0] = "Aug";
+		}	
+		else if ((day == 0) && (a[0] == "Oct")){
+			day = 30;
+			a[0] = "Sep";
+		}	
+		else if ((day == 0) && (a[0] == "Nov")){
+			day = 31;
+			a[0] = "Oct";
+		}	
+		else if ((day == 0) && (a[0] == "Dec")){
+			day = 30;
+			a[0] = "Nov";
+
+
+		}	
+		
+
+		datestring = day + "/" + a[0] + "/" + a[2];
+
+		dt = new Date(datestring);
+
+
+		document.write(dt);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
