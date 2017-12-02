@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Price Comparison</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+
+
+	<div class="container">
+		
+		<nav class="navigation">
+			
+			<a href="index.html"><img src="logo.png" alt="logo"></a>
+			
+			<h1>Price comparison</h1>
+		
+		</nav>
+
+		<main>
+			
+			<div class="amst">
+
+				<img src="amsterdam.jpg" alt="Amsterdam">
+
+					
+
+					<div class="amsterdamtext">
+
+								<div class="price">
+					
+									<h4 id="amsterdam"></h4> 	
+
+									<p id="amsterdamprice"></p>
+
+								</div>	
+
+						<div class="am">	
+
+							<p id="Ncountry"></p>	
+
+							<p class="avg" id="avg1"></p>
+
+						</div>
+
+					</div>
+
+			</div>		
+			
+			<div class="lond">
+
+					<img src="london.jpg" alt="London">
+
+						<div class="londontext">
+
+							<div class="price">
+
+								<h4 id="london"></h4>		
+
+								<p id="londonprice"></p>
+
+							</div>	
+
+							<div class="uk">	
+
+								<p id="UKcountry"></p>	
+
+								<p class="avg" id="avg2"></p>
+
+							</div>
+
+						</div>
+
+			</div>	
+
+		</main>
+
+			<footer>
+			
+				<p><b>Amsterdam</b> will be more affordable than <b>London</b> for New Year's celebration</p>
+				<p>Difference in price</p>
+		
+				<div class  ="difference" id="dif">	
+
+
+				</div>	
+
+			</footer>
+
+	</div>		
+
+	</div>	
+
+	<script type="text/javascript">
+
+		
+var cityA= "Amsterdam"
+
+var cityL= "London"
+
+var countryA= "Netherlands"
+
+var countryL= "United Kingdom"
+
+var priceAL= "Avarage Price"
+
+
+
+
+
+
+
+var aCity = document.getElementById("amsterdam");
+aCity.innerHTML = cityA;
+
+var lCity = document.getElementById("london");
+lCity.innerHTML = cityL;
+
+var countryN = document.getElementById("Ncountry");
+countryN.innerHTML = countryA;
+
+var countryUK = document.getElementById("UKcountry");
+countryUK.innerHTML = countryL;
+
+var avgN = document.getElementById("avg1")
+avgN.innerHTML = priceAL;
+
+var avgUK = document.getElementById("avg2")
+avgUK.innerHTML = priceAL;
+
+
+
+function avaragePrice (price1, price2, price3, price4){
+	var sum = price1 + price2 + price3 + price4;
+ 	var avg = sum/4;
+ 	var result = [avg];
+ 	return result;
+
+
+}
+
+
+var priceN = document.getElementById("amsterdamprice");
+priceN.innerHTML = (avaragePrice(1500, 500, 1800, 700)[0]);
+
+
+var priceL = document.getElementById("londonprice");
+priceL.innerHTML = (avaragePrice(2500, 1500, 1000, 900)[0]);
+
+
+function priceDiff (pricediff1, pricediff2){
+	var sub = pricediff1 - pricediff2;
+	var result = [sub];
+	return result;
+}
+
+var priceDifference = document.getElementById("dif");
+priceDifference.innerHTML = (priceDiff(1475, 1125)[0]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+	</script>	
+
+
+
+</body>
+</html>

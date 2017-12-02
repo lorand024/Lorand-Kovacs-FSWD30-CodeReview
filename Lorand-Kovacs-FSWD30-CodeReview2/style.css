@@ -1,0 +1,117 @@
+﻿body {
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(229, 234, 238);
+	font-family: arial;
+}
+
+.container {
+	min-width: 750px;
+	max-width: 100%;
+}
+
+.navigation {
+	background-color: rgb(0,54,128);
+	display: flex;
+	color: snow;
+}
+
+.navigation img {
+	height: 35px;
+	max-width: 1200px;
+	padding: 15px 35px 10px 50px;
+
+}
+
+main {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 50px;
+	color: darkgrey;
+}
+
+main .avg {
+	text-align: right;
+	padding-right: 5px;
+
+}
+
+main img {
+	width: 100%;
+}
+
+
+
+.amst {
+	border: 1px solid lightgrey;
+	background-color: white;
+	font-size: 18px;
+	width: 28%;
+}
+
+.amsterdamtext{
+	padding-left: 5px; 
+
+
+}
+
+
+.lond {
+	border: 1px solid lightgrey;
+	background-color: white;
+	font-size: 18px;
+	width: 28%;
+
+}
+
+#amsterdamprice {
+	padding-top: 23px;
+}
+
+#londonprice {
+	padding-top: 23px;
+}
+
+
+
+
+.londontext {
+	padding-left: 5px;
+}
+
+h4 {color: rgb(17, 160, 208);
+	font-size: 28px;}
+
+.price {display: flex;
+		justify-content: space-between;
+		padding-right: 5px;}
+
+.uk {display: flex;
+	justify-content: space-between;}
+
+.am {display: flex;
+	justify-content: space-between;}
+
+
+footer {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 18px;
+}
+
+
+.difference {
+	border: 1px solid rgb(33,166,211);
+	width: 200px;
+	height: 75px;
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(33,166,211);
+	color: snow;
+	font-size: 50pt;
+	
+
+}
+
